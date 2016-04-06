@@ -14,7 +14,7 @@ defmodule Btcresearcher.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :gold, :poison]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +27,9 @@ defmodule Btcresearcher.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{ :gold, "~> 0.10" }]
+    [
+      {:gold, git: "https://github.com/denis4net/gold.git" },
+      {:poison, "~> 1.5"}
+    ]
   end
 end
