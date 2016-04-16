@@ -28,3 +28,7 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+
+config :btcresearcher,
+  bitcoind_nodes: [[hostname: "denis-book.lan", port: 8332,  user: "62f699a52f", password: "62f699a52f"]],
+  compute_nodes: [[]]
