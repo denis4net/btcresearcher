@@ -12,4 +12,16 @@ defmodule Btcresearcher do
     {:ok, pid} = start_link()
     pid
   end
+
+  def get_transactions!(pid, index) when is_integer(index) do
+    hash = Gold.getblockhash! pid, index
+    blk = Gold.getblock! pid, hash
+    blk[:transactions]
+  end
+
+  def get_transactions!(pid, range) do
+    Enum.map range, fn index ->
+      get_transactions! pid, index
+    end
+  end
 end
