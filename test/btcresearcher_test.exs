@@ -1,6 +1,7 @@
   defmodule BtcresearcherTest do
   use ExUnit.Case
   require Gold
+  require Logger
   doctest Btcresearcher
 
   test "getblockhash" do
@@ -11,7 +12,10 @@
 
   test "gettransactions" do
     pid = Btcresearcher.start_link!
-    transactions = Btcresearcher.get_transactions! pid, 1..5
-  end
+    count = Gold.getblockcount!(pid)
+    length = 128
 
+    transactions = Btcresearcher.get_block_transactions! pid, count - length, length
+    IO.puts("Transactions length: #{length(transactions)}")
+  end
 end

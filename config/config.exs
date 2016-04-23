@@ -30,5 +30,12 @@ use Mix.Config
 #     import_config "#{Mix.env}.exs"
 
 config :btcresearcher,
-  bitcoind_nodes: [[hostname: "denis-book.lan", port: 8332,  user: "62f699a52f", password: "62f699a52f"]],
-  compute_nodes: [[]]
+    bitcoind_nodes: [
+      # [hostname: "localhost", port: 8332, user: "62f699a52f", password: "62f699a52f"],
+      # [hostname: "bananapi", port: 8332,  user: "62f699a52f", password: "62f699a52f"],
+      [hostname: "denis-book", port: 8332,  user: "62f699a52f", password: "62f699a52f"]],
+    compute_nodes: [[]]
+
+config :logger,
+    level: :warn,
+    truncate: 4096
