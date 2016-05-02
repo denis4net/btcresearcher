@@ -37,5 +37,5 @@ config :btcresearcher,
     compute_nodes: [[]]
 
 config :logger,
-    level: :warn,
+    level: :info,
     truncate: 4096
