@@ -2,19 +2,25 @@ defmodule Btcresearcher.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :btcresearcher,
+    [
+     app: :btcresearcher,
      version: "0.0.1",
      elixir: "~> 1.1",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     escript: escript,
+     deps: deps
+    ]
   end
 
   # Configuration for the OTP application
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :gold, :poison]]
+    [
+     applications: [:logger, :gold],
+     #  mod: {Btcresearcher.App, []}
+    ]
   end
 
   # Dependencies can be Hex packages:
@@ -29,7 +35,13 @@ defmodule Btcresearcher.Mixfile do
   defp deps do
     [
       {:gold, git: "https://github.com/denis4net/gold.git" },
-      {:poison, "~> 1.5"}
+    ]
+  end
+
+  defp escript do
+    [
+      main_module: Btcresearcher.App,
+      embed_elixir: true
     ]
   end
 end

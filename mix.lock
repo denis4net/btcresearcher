@@ -1,6 +1,8 @@
 %{"certifi": {:hex, :certifi, "0.4.0"},
+  "combine": {:hex, :combine, "0.7.0"},
   "decimal": {:hex, :decimal, "1.1.2"},
   "ebitcoind": {:git, "https://github.com/edescourtis/ebitcoind", "6e47d09be81851bd7340402f5dafe88c0a6578d1", []},
+  "gettext": {:hex, :gettext, "0.11.0"},
   "gold": {:git, "https://github.com/denis4net/gold.git", "a6560dafed8bb2b83768e675132f3d730ca37fb3", []},
   "goldrush": {:git, "git://github.com/DeadZen/goldrush.git", "212299233c7e7eb63a97be2777e1c05ebaa58dbe", [tag: "0.1.8"]},
   "hackney": {:hex, :hackney, "1.6.0"},
@@ -16,4 +18,6 @@
   "mimerl": {:hex, :mimerl, "1.0.2"},
   "mochiweb": {:git, "git://github.com/mochi/mochiweb.git", "a1ed381e1c4f56c7d1eaee2c2cb725719905a84a", [branch: "master"]},
   "poison": {:hex, :poison, "1.5.2"},
-  "ssl_verify_fun": {:hex, :ssl_verify_fun, "1.1.0"}}
+  "ssl_verify_fun": {:hex, :ssl_verify_fun, "1.1.0"},
+  "timex": {:hex, :timex, "2.1.4"},
+  "tzdata": {:hex, :tzdata, "0.5.7"}}
