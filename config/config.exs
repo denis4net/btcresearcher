@@ -39,5 +39,5 @@ config :btcresearcher,
     ]
 
 config :logger,
-    level: :debug,
+    level: :info,
     truncate: 4096
