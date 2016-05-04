@@ -34,8 +34,10 @@ config :btcresearcher,
       # [hostname: "localhost", port: 8332, user: "62f699a52f", password: "62f699a52f"],
       # [hostname: "bananapi", port: 8332,  user: "62f699a52f", password: "62f699a52f"],
       [hostname: "denis-book", port: 8332,  user: "62f699a52f", password: "62f699a52f"]],
-    compute_nodes: [[]]
+    compute_nodes: [
+      :"btc1@localhost"
+    ]
 
 config :logger,
-    level: :info,
+    level: :debug,
     truncate: 4096

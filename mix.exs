@@ -19,7 +19,7 @@ defmodule Btcresearcher.Mixfile do
   def application do
     [
      applications: [:logger, :gold],
-     #  mod: {Btcresearcher.App, []}
+     mod: {Btcresearcher.App, []}
     ]
   end
 
